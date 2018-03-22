@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="hr.master.cs" Inherits="new_co.hr.hr" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+   <div class="page">
+        <div class="header" style="background-color: 483E35">
+            <div class="title"  
+                style="width: 958px; height: 202px; background-image: url('/Styles/cover.png');">
+
+          </div>
+            
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" 
+                    EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" 
+                    BackColor="#33CC33" BorderStyle="Inset" BorderWidth="2px" Font-Bold="True" 
+                    ForeColor="Black">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/hr/hrhome.aspx" Text="HR's Home"/>
+                        <asp:MenuItem Text="Add Vacancies " Value="Admin Panel" 
+                            NavigateUrl="~/hr/hraddvacncy.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Check Applications" Value="Check Applications" 
+                            NavigateUrl="~/hr/checkvac.aspx">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Update" Value="Update">
+                            <asp:MenuItem NavigateUrl="~/hr/hreditprofile.aspx" Text="Update Profile" 
+                                Value="Update Profile"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/hr/hreditcoprofile.aspx" Text="Edit Company" 
+                                Value="Edit Company"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Logout" Value="New Item" NavigateUrl="~/Default.aspx"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+  </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer" >
+        
+    </div>
+    </form>
+</body>
+</html>
