@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="new_co.admin.admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+     <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/css/animate.min.css" rel="stylesheet" />
+    <link href="~/css/owl.carousel.css" rel="stylesheet" />
+    <link href="~/css/owl.transitions.css" rel="stylesheet" />
+    <link href="~/css/prettyPhoto.css" rel="stylesheet" />
+    <link href="~/css/main.css" rel="stylesheet" />
+    <link href="~/css/responsive.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+   <div class="page">
+        <div class="header" style="background-color: 483E35">
+            <div class="title"  
+                style="width: 958px; height: 202px; background-image: url('/Styles/cover.png');">
+
+          </div>
+            
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" 
+                    EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" 
+                    BackColor="#33CC33" BorderStyle="Inset" BorderWidth="2px" Font-Bold="True" 
+                    ForeColor="Black">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Admin Home"/>
+                        <asp:MenuItem Text="View HR Requests" Value="Admin Panel" 
+                            NavigateUrl="~/AdminPanel/AdminHome.aspx"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/admin/viewstreg.aspx" 
+                            Text="View Student Registration" Value="View Student Registration">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/studentregister.aspx" Text="Manage" 
+                            Value="New Student">
+                            <asp:MenuItem Text="HR" Value="HR"></asp:MenuItem>
+                            <asp:MenuItem Text="Student" Value="Student"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Logout" Value="New Item" NavigateUrl="~/About.aspx"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer" >
+        
+    </div>
+    </form>
+</body>
+</html>
